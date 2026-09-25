@@ -42,7 +42,7 @@ python3.12 -m venv .venv
 
 - `Overview / Campus map`：本地缓存的 OSM 建筑、步道、校区边界、S44 和 100 m 网格。地图底图默认关闭，矢量与静态回退图来自本地；可选 OSM 在线底图保留归属标注。
 - `Weather & Quality`：实际样本时间、各变量小时图与每日覆盖率。最新值显示缓存时间，并非实时。
-- `Scenario Explorer`：基于相同观测样本比较 +1/+2°C、降雨 ×1.1/×1.2 和指定网格遮棚改善敏感性情景；展示汇总指标、网格散点比较和降雨阈值分析，并可下载 JSON/CSV/GeoPackage。
+- `Scenario Explorer`：基于相同观测样本比较 +1/+2°C、降雨 ×1.1/×1.2 和指定网格遮棚改善敏感性情景；展示汇总指标、网格散点比较、两张同色标的 100 m 网格地图和降雨阈值分析，并可下载 JSON/CSV/GeoPackage。蓝框标识假设遮棚改善的网格。
 - `Sources & Methods`：逐文件来源、种类、哈希、假设和限制。
 - `3D buildings (experimental)`：真实 OSM 轮廓的浏览拉伸。只有极少数实际 `height` 标签，其他高度明确标记为假设；不用于分析。
 - `data/raw/`：原始 OSM XML、官方 v1 每日 JSON、v2 最新/分页结构探针；`data/metadata/source_manifest.json` 是可机读来源清单。

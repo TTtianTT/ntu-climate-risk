@@ -228,6 +228,9 @@ with scenarios:
     baseline_q1 = scenario_grid(grid, heat_base["heat_degree_hours"] if valid else None, 1.0)
     changed_q0 = scenario_grid(grid, heat_scenario["heat_degree_hours"] if valid else None, 0.0, set(chosen), reduction)
     changed_q1 = scenario_grid(grid, heat_scenario["heat_degree_hours"] if valid else None, 1.0, set(chosen), reduction)
+    upper = scenario_grid(grid, heat_degree_hours(obs, cfg["temperature_threshold_c"], 2.0, meta["days"])["heat_degree_hours"] if valid else None, q)
+    common_max = max(float(upper["proxy_degC_h_m"].max()) if valid else 0,
+                     float(changed["proxy_degC_h_m"].max()) if valid else 0)
     total_base = float(baseline["proxy_degC_h_m"].sum()) if valid else None
     total_new = float(changed["proxy_degC_h_m"].sum()) if valid else None
     s1, s2, s3 = st.columns(3)
@@ -249,6 +252,14 @@ with scenarios:
     st.plotly_chart(px.scatter(compare, x="baseline_proxy", y="scenario_proxy", hover_name="grid_id",
                                title="Baseline vs sensitivity scenario · same cells and observation mask",
                                labels={"baseline_proxy": "Baseline (°C·h·m)", "scenario_proxy": "Scenario (°C·h·m)"}), use_container_width=True)
+    st.caption(f"Common map color scale: 0 to {common_max:,.1f} °C·h·m. q=0 and q=1 define a parameter sensitivity range, not a confidence interval.")
+    left, right = st.columns(2)
+    with left:
+        st.subheader("Baseline")
+        static_map(grid, baseline, common_max, "Baseline · local 100 m grid")
+    with right:
+        st.subheader("Sensitivity scenario")
+        static_map(grid, changed, common_max, "Sensitivity scenario · local 100 m grid")
     rain_threshold = st.slider("Observed-hour rainfall threshold (mm/h)", 5.0, 50.0,
                                float(cfg.get("rainfall_event_threshold_mm_h", 20.0)), 1.0)
     rainfall = rainfall_events(obs, [1.0, rain_mult], cfg["minimum_coverage"], rain_threshold)
