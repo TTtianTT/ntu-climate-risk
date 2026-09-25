@@ -7,6 +7,8 @@
 仓库包含 2026-08-26 至 2026-09-24 的真实原始响应、清洗数据、来源清单和分析产物。克隆后可直接用这份**历史缓存快照**启动页面，不会自动更新天气。推荐 Python 3.12，不要修改系统 Python：
 
 ```bash
+git clone https://github.com/TTtianTT/ntu-climate-risk.git
+cd ntu-climate-risk
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501
