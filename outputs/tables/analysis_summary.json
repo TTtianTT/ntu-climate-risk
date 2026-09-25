@@ -1,0 +1,127 @@
+{
+  "threshold_c": 30.0,
+  "q_unknown": 0.5,
+  "minimum_coverage": 0.8,
+  "station_id": "S44",
+  "heat": {
+    "0.0": {
+      "heat_degree_hours": 227.02333333333334,
+      "valid_hours": 717.9833333333333,
+      "coverage": 0.997199074074074,
+      "per_valid_hour": 0.31619582627266185
+    },
+    "1.0": {
+      "heat_degree_hours": 487.84833333333336,
+      "valid_hours": 717.9833333333333,
+      "coverage": 0.997199074074074,
+      "per_valid_hour": 0.6794702755402865
+    },
+    "2.0": {
+      "heat_degree_hours": 901.95,
+      "valid_hours": 717.9833333333333,
+      "coverage": 0.997199074074074,
+      "per_valid_hour": 1.2562269319157826
+    }
+  },
+  "qualified_for_proxy": true,
+  "selected_grid_ids": [
+    "E10500_N36800",
+    "E10900_N35900",
+    "E11000_N37100",
+    "E11100_N36300",
+    "E11100_N36700",
+    "E11400_N36000",
+    "E11400_N36100",
+    "E11400_N36300",
+    "E11500_N36100",
+    "E11900_N36400"
+  ],
+  "scenarios": [
+    {
+      "name": "Observed-sample baseline",
+      "warming_c": 0.0,
+      "shelter_reduction": 0.0,
+      "H_degC_h": 227.02333333333334,
+      "total_proxy_degC_h_m": 8073161.749591748,
+      "q0_total_proxy_degC_h_m": 36360.02242478375,
+      "q1_total_proxy_degC_h_m": 16109963.476758713,
+      "change_pct": 0.0
+    },
+    {
+      "name": "Warming +1°C",
+      "warming_c": 1.0,
+      "shelter_reduction": 0.0,
+      "H_degC_h": 487.84833333333336,
+      "total_proxy_degC_h_m": 17348342.3331027,
+      "q0_total_proxy_degC_h_m": 78133.71462504606,
+      "q1_total_proxy_degC_h_m": 34618550.95158035,
+      "change_pct": 114.88907160791109
+    },
+    {
+      "name": "Warming +2°C",
+      "warming_c": 2.0,
+      "shelter_reduction": 0.0,
+      "H_degC_h": 901.95,
+      "total_proxy_degC_h_m": 32074184.327797193,
+      "q0_total_proxy_degC_h_m": 144456.17436989016,
+      "q1_total_proxy_degC_h_m": 64003912.4812245,
+      "change_pct": 297.29396390973034
+    },
+    {
+      "name": "Shelter 25%",
+      "warming_c": 0.0,
+      "shelter_reduction": 0.25,
+      "H_degC_h": 227.02333333333334,
+      "total_proxy_degC_h_m": 7817901.761590841,
+      "q0_total_proxy_degC_h_m": 32643.448430592976,
+      "q1_total_proxy_degC_h_m": 15603160.07475109,
+      "change_pct": -3.161834184900547
+    },
+    {
+      "name": "Shelter 50%",
+      "warming_c": 0.0,
+      "shelter_reduction": 0.5,
+      "H_degC_h": 227.02333333333334,
+      "total_proxy_degC_h_m": 7562641.773589935,
+      "q0_total_proxy_degC_h_m": 28926.874436402213,
+      "q1_total_proxy_degC_h_m": 15096356.67274347,
+      "change_pct": -6.323668369801084
+    },
+    {
+      "name": "Warming +2°C + shelter 50%",
+      "warming_c": 2.0,
+      "shelter_reduction": 0.5,
+      "H_degC_h": 901.95,
+      "total_proxy_degC_h_m": 30045919.278588586,
+      "q0_total_proxy_degC_h_m": 114924.72608357281,
+      "q1_total_proxy_degC_h_m": 59976913.831093594,
+      "change_pct": 272.17041117884173
+    }
+  ],
+  "common_color_max": 539217.7282387331,
+  "rainfall": {
+    "status": "available",
+    "strongest_qualified_hour_start": "2026-09-23T13:00:00+08:00",
+    "strongest_qualified_hour_mm": 28.8,
+    "threshold_mm_h": 20.0,
+    "qualified_hours": 720,
+    "scenarios": [
+      {
+        "multiplier": 1.0,
+        "scaled_mm": 28.8,
+        "qualified_sample_hours_at_or_above_threshold": 3
+      },
+      {
+        "multiplier": 1.1,
+        "scaled_mm": 31.680000000000003,
+        "qualified_sample_hours_at_or_above_threshold": 3
+      },
+      {
+        "multiplier": 1.2,
+        "scaled_mm": 34.56,
+        "qualified_sample_hours_at_or_above_threshold": 3
+      }
+    ],
+    "meaning": "Sensitivity scaling of the same observed hours, without gap filling or changed event timing; threshold crossings may change"
+  }
+}

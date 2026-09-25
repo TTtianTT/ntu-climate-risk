@@ -1,0 +1,84 @@
+{
+  "station_id": "S44",
+  "station_metadata": {
+    "temperature": {
+      "id": "S44",
+      "device_id": "S44",
+      "name": "Nanyang Avenue",
+      "location": {
+        "latitude": 1.3458,
+        "longitude": 103.6817
+      }
+    },
+    "humidity": {
+      "id": "S44",
+      "device_id": "S44",
+      "name": "Nanyang Avenue",
+      "location": {
+        "longitude": 103.6817,
+        "latitude": 1.3458
+      }
+    },
+    "wind_speed": {
+      "id": "S44",
+      "device_id": "S44",
+      "name": "Nanyang Avenue",
+      "location": {
+        "latitude": 1.3458,
+        "longitude": 103.6817
+      }
+    },
+    "rainfall": {
+      "id": "S44",
+      "device_id": "S44",
+      "name": "Nanyang Avenue",
+      "location": {
+        "latitude": 1.3458,
+        "longitude": 103.6817
+      }
+    }
+  },
+  "spatial_counts": {
+    "campus": 1,
+    "buildings": 1083,
+    "walks": 3398,
+    "pois": 123,
+    "grid": 209,
+    "stations": 1
+  },
+  "observation_rows": 137470,
+  "days": [
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-05",
+    "2026-09-06",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-12",
+    "2026-09-13",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24"
+  ],
+  "grid_size_m": 100,
+  "minimum_coverage": 0.8
+}

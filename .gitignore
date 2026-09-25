@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.streamlit/
+.env
+**/.DS_Store
+data/metadata/render_cache/
+outputs/maps/dashboard_overview.png
+*.pyc

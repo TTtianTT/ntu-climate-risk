@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "sample_period": [
+    "2026-08-26",
+    "2026-09-24"
+  ],
+  "station_id": "S44",
+  "rows_by_variable": {
+    "humidity": 42702,
+    "rainfall": 8610,
+    "temperature": 43079,
+    "wind_speed": 43079
+  },
+  "suspect_rows_by_variable": {
+    "humidity": 0,
+    "rainfall": 0,
+    "temperature": 0,
+    "wind_speed": 87
+  },
+  "coverage_by_variable": {
+    "humidity": {
+      "min": 0.8548611111111111,
+      "mean": 0.9884722222222223,
+      "max": 0.9972222222222222
+    },
+    "rainfall": {
+      "min": 0.9965277777777778,
+      "mean": 0.9965277777777778,
+      "max": 0.9965277777777778
+    },
+    "temperature": {
+      "min": 0.9965277777777778,
+      "mean": 0.997199074074074,
+      "max": 0.9972222222222222
+    },
+    "wind_speed": {
+      "min": 0.9944444444444444,
+      "mean": 0.9951851851851852,
+      "max": 0.9958333333333332
+    }
+  },
+  "spatial_counts": {
+    "campus": 1,
+    "buildings": 1083,
+    "walks": 3398,
+    "pois": 123,
+    "grid": 209,
+    "stations": 1
+  },
+  "campus_building_count": 343,
+  "campus_walk_way_count": 1597,
+  "covered_unknown_fraction_of_walk_length": 0.9047018997448335,
+  "manifest_entries_checked": 163,
+  "baseline_H_degC_h": 227.02333333333334
+}

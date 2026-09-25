@@ -1,0 +1,38 @@
+{
+  "temperature": {
+    "id": "S44",
+    "device_id": "S44",
+    "name": "Nanyang Avenue",
+    "location": {
+      "latitude": 1.3458,
+      "longitude": 103.6817
+    }
+  },
+  "humidity": {
+    "id": "S44",
+    "device_id": "S44",
+    "name": "Nanyang Avenue",
+    "location": {
+      "longitude": 103.6817,
+      "latitude": 1.3458
+    }
+  },
+  "wind_speed": {
+    "id": "S44",
+    "device_id": "S44",
+    "name": "Nanyang Avenue",
+    "location": {
+      "latitude": 1.3458,
+      "longitude": 103.6817
+    }
+  },
+  "rainfall": {
+    "id": "S44",
+    "device_id": "S44",
+    "name": "Nanyang Avenue",
+    "location": {
+      "latitude": 1.3458,
+      "longitude": 103.6817
+    }
+  }
+}

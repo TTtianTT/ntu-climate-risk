@@ -1,0 +1,13 @@
+# Data sources and verified access
+
+| Kind | Source | Actual use and caveat |
+|---|---|---|
+| Observed community GIS | [OpenStreetMap API](https://api.openstreetmap.org/api/0.6/map), [ODbL/attribution](https://www.openstreetmap.org/copyright) | Raw bbox XML saved. Campus is way 115105262 with `amenity=university` and NTU name. It is an OSM polygon, not an official campus survey. Building, highway, covered, bridge, tunnel and layer tags are preserved in `tags_json`. |
+| Observed station weather | [NEA/data.gov.sg collection](https://data.gov.sg/collections/1459/view), [API guide](https://guide.data.gov.sg/developer-guide/real-time-apis), [Open Data Licence](https://data.gov.sg/open-data-licence) | V2 latest/historical schema and pagination checked. The currently responding official v1 `/v1/environment/{air-temperature,rainfall,relative-humidity,wind-speed}?date=YYYY-MM-DD` supplies whole local days, used for analysis. Raw daily responses cached. Station metadata verifies S44 Nanyang Avenue at 1.3458 N, 103.6817 E for each variable. Units read from responses: deg C, 5-min cumulative mm, percentage, knots. |
+| Official climate projection context | [CCRS V3 entry](https://ccrs.weather.gov.sg/climate-projections/), [V3 visualiser](https://www.mss-int.sg/v3-climate-projections/explore/climate-visualiser/atmospheric-variables/future-changes/time-series), [V3 FAQ](https://www.mss-int.sg/v3-climate-projections/faq) | Accessible pages show 1995–2014 reference, 2080–2099 end-century visualisation, SSP1-2.6/2-4.5/5-8.5, 8 km and 2 km domains and temperature/rainfall/humidity variables. No traceable NTU-specific V3 numerical projection or data download has been incorporated. |
+| Assumed | `configs/default.yaml` | 30°C threshold, q_unknown, +1/+2°C, rain ×1.1/×1.2, selected grid IDs and shelter reduction are self-selected sensitivity parameters. They are not V3 projections. |
+| Derived | `data/processed/`, `outputs/` | Quality flags, SVY21 geometry, 100 m grid, H and P. See machine-readable `data/metadata/source_manifest.json` for SHA256 links to raw inputs and config. |
+
+The exploratory [Overpass](https://overpass-api.de/api/interpreter) endpoint returned HTTP 406; a second public node timed out. The official OSM map API worked. No Geofabrik file was needed. API responses, units, timestamps and station IDs are verified from the saved JSON, not entered as unverified constants.
+
+In the actual 100 m campus grid, 90.5% of walkable mapped length lacks a usable `covered` value. Only 160.2 m is explicitly `covered=no`; 7,297.8 m is `covered=yes`, and 70,801.5 m is unknown. The proxy therefore depends strongly on `q_unknown` and mapped way length; these categories require field checks before planning use.

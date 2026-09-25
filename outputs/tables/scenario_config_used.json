@@ -1,0 +1,34 @@
+{
+  "station_id": "S44",
+  "grid_size_m": 100,
+  "temperature_threshold_c": 30.0,
+  "minimum_coverage": 0.8,
+  "q_unknown": 0.5,
+  "rainfall_multipliers": [
+    1.0,
+    1.1,
+    1.2
+  ],
+  "rainfall_event_threshold_mm_h": 20.0,
+  "warming_c": [
+    0.0,
+    1.0,
+    2.0
+  ],
+  "shelter_reductions": [
+    0.25,
+    0.5
+  ],
+  "shelter_grid_ids": [
+    "E11400_N36000",
+    "E11500_N36100",
+    "E10900_N35900",
+    "E11900_N36400",
+    "E10500_N36800",
+    "E11400_N36100",
+    "E11100_N36700",
+    "E11000_N37100",
+    "E11100_N36300",
+    "E11400_N36300"
+  ]
+}
